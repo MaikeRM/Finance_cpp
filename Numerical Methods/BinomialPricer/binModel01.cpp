@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include "binModel01.h"
 
 using namespace std;
 
