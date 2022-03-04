@@ -20,4 +20,5 @@ int main()
     cout << "S(n,i) = " << S(S0, U, D, n, i);
 
     system("pause");
+    return 0;
 }
