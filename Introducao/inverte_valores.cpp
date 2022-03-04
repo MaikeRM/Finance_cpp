@@ -13,4 +13,7 @@ int main(){
 
     num = num * -1;
     cout << num << " -> inversao definitiva";
+
+    system("pause");
+    return 0;
 }
