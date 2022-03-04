@@ -1,6 +1,6 @@
-#include "binModel01.h"
 #include <iostream>
 #include <cmath>
+#include "binModel01.h"
 
 using namespace std;
 
@@ -18,4 +18,6 @@ int main()
 
     //calculo da funcao preco
     cout << "S(n,i) = " << S(S0, U, D, n, i);
+
+    system("pause");
 }
