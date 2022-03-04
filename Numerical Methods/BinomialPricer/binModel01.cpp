@@ -5,8 +5,9 @@ using namespace std;
 
 void lines()
 {
-    cout << "----------------------------------------------------------------------------" << endl;
+    cout << "--------------------------------------------------------------------" << endl;
 }
+
 //--------------------------------------------------------------------------------- getData
 
 int getData(double& S0, double& U, double& D, double& R, int& n, int& i)
@@ -45,7 +46,6 @@ int getData(double& S0, double& U, double& D, double& R, int& n, int& i)
 }
 
 //--------------------------------------------------------------------------------- riskNeutral
-
 double riskNeutral(double U, double D, double R)
 {
     //computando probabilidade risk-neutral
@@ -53,25 +53,7 @@ double riskNeutral(double U, double D, double R)
 }
 
 //--------------------------------------------------------------------------------- preco
-
 double S(double S0, double U, double D, int n, int i)
 {
     return S0*pow(1+U,i)*pow(1+D,n-i);
-}
-
-//--------------------------------------------------------------------------------- main
-
-int main()
-{
-    double S0, U, D, R;
-    int n, i;
-
-    if(getData(S0, U, D, R, n, i)==1) return 1;
-    
-    //computando probabilidade risk-neutral
-    cout << "q = " << riskNeutral(U, D, R) << endl;
-
-    //calculo da funcao preco
-    cout << "S(n,i) = " << S(S0, U, D, n, i) << endl;
-
 }
