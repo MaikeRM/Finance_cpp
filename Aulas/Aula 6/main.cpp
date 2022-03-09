@@ -26,9 +26,7 @@ int main()
     
     payment = payments(principal, monthInterest, monthsOfLoan);
     cout << "Payment: "<< payment << endl;
-
-    system("pause");
+    
     goto inicio;
     return 0;
-    
 }
