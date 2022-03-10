@@ -3,30 +3,29 @@
 
 using namespace std;
 
-double get_data(double& S, double& K, double& tempo, double& volatilidade, double& riskFree)
+double get_data(double& S, double& K, double& time, double& volatility, double& riskFree)
 {
-    cout<<"Preco acao: "; cin>> S;
-    cout<<"Preco Strike: "; cin>> K;
-    cout<<"Tempo: "; cin>> tempo;
-    cout<<"Volatilidade: "; cin>> volatilidade;
+    cout<<"Price: "; cin>> S;
+    cout<<"Strike: "; cin>> K;
+    cout<<"Time: "; cin>> time;
+    cout<<"Volatility: "; cin>> volatility;
     cout<<"Risk Free Rate: "; cin>> riskFree;
 }
 
 
 int main()
 {
-    double optionPrice, optionDelta,S, K, tempo, volatilidade, riskFree;
+    double optionPrice, optionDelta,S, K, time, volatility, riskFree;
     
-    inicio:
-
-    get_data(S, K, tempo, volatilidade, riskFree);
-    optionDelta = CallDelta(S, K, tempo, volatilidade, riskFree);
+    begining:
+    get_data(S, K, time, volatility, riskFree);
+    optionDelta = CallDelta(S, K, time, volatility, riskFree);
     cout <<optionDelta<<endl;
 
-    optionPrice = CallPreco(S, K, tempo, volatilidade, riskFree);
+    optionPrice = CallPrice(S, K, time, volatility, riskFree);
     cout <<optionPrice<<endl;
 
-    goto inicio;
+    goto begining;
 
     return 0;
 }

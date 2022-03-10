@@ -1,7 +1,7 @@
 #ifndef _bsm_h
 #define _bsm_h
 
-double CallDelta(double S, double K, double tempo, double volatilidade ,double riskFree);
-double CallPreco(double S, double K, double tempo, double volatilidade, double riskFree);
+double CallDelta(double S, double K, double time, double volatility ,double riskFree);
+double CallPrice(double S, double K, double time, double volatility, double riskFree);
 
 #endif
